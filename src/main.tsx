@@ -19,7 +19,7 @@ if (rootElement) {
       title: "Den otevřených dveří",
       image: `${home}`,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.",
+        "Po příchodu si návštěvník může vybrat jeden ze dvou oborů – informační technologie nebo ekonomické lyceum.",
       instructionsForIT:
         "Svěle pokud tě zajímají počítače tak  se vydej po schodech a pak zatoč doleva až na konec chodby kde narazíš na učebnu VYT1, kde si naskenuješ QR kód pro více informací.",
       instructionsForLice:
@@ -32,7 +32,7 @@ if (rootElement) {
       title: "VYT 1",
       image: `${vyt1}`,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.",
+        "VYT 1 je počítačová učebna, která je vybavena pro výuku Javy a síťových technologií. Studenti pracují s moderními počítači a softwary pro programování v Javě a správu sítí.",
       instructions:
         "Vyjděte z třídy a vydejte se do 1. patra a pak doprava na konec chodby kde se nachází učebna VYT4.",
       questions: [
@@ -70,7 +70,7 @@ if (rootElement) {
       title: "VYT 4",
       image: `${vyt1}`,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.",
+        "Učebna VYT4 je nejmoderněji vybavená místnost pro studenty oboru informačních technologií, zaměřená na výuku počítačové grafiky. Studenti zde pracují na výkonných počítačích s profesionálním grafickým softwarem, jako je Adobe a mají přístup k 3D tiskárně pro tvorbu fyzických modelů. Tento prostor poskytuje ideální podmínky pro kreativní projekty a praktické učení.",
       instructions:
         "Vyjděte z třídy a vydejte se do 2. patra a pak doleva na konec chodby kde se nachází učebna VYT4.",
       questions: [
@@ -95,7 +95,7 @@ if (rootElement) {
           ],
         },
         {
-          question: "Kolik je na škole tříd? (číslice)",
+          question: "Kolik je na škole tříd? (Čísla)",
           type: "write",
           answers: [{ id: "99", answer: "12", correct: true }],
         },

@@ -22,6 +22,44 @@ export const TextBlock: React.FC<TextBlockTypes> = ({
         <h1 className="textblock__title">Skvělá práce, vše máš správně!</h1>
       ) : null}
       <p className="textblock__description">{description}</p>
+      {showTitle === "howitworks" && (
+        <>
+          <p className="textblock__title">Rozmístění</p>
+          <p className="textblock__description">
+            Po škole jsou rozmístěny QR kódy v jednotlivých učebnách a
+            stanovištích. Návštěvníci je mohou skenovat pomocí svého telefonu.
+          </p>
+        </>
+      )}
+      {showTitle === "howitworks" && (
+        <>
+          <p className="textblock__title">QR kódy</p>
+          <p className="textblock__description">
+            Každý QR kód odemkne úkol spojený s konkrétní učebnou nebo částí
+            školy. Úkoly jsou zaměřeny na objevování školního prostředí,
+            vybavení a informací o jednotlivých oborech.
+          </p>
+        </>
+      )}
+      {showTitle === "howitworks" && (
+        <>
+          <p className="textblock__title">Trasa</p>
+          <p className="textblock__description">
+            Aplikace vede návštěvníky postupně přes jednotlivé části školy, čímž
+            je provádí interaktivní trasou.
+          </p>
+        </>
+      )}
+      {showTitle === "howitworks" && (
+        <>
+          <p className="textblock__title">Pomoc</p>
+          <p className="textblock__description">
+            Po načtení QR kódu v učebně se zobrazí kvíz a po správném
+            zodpovězení vám řekne kam jít dál do dalších učeben a když se
+            zaseknete neváhejte se obrátit na učitele.
+          </p>
+        </>
+      )}
 
       {showTitle === "goodchoise" && (
         <div className="textblock__image__wrapper">
