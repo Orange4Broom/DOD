@@ -29,7 +29,7 @@ if (rootElement) {
       id: "2",
       type: "class",
       path: "/vyt1",
-      title: "VYT1",
+      title: "VYT 1",
       image: `${vyt1}`,
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.",
@@ -53,7 +53,7 @@ if (rootElement) {
             { id: "12", answer: "Python + C#", correct: false },
             { id: "13", answer: "ASP a Java", correct: false },
             { id: "14", answer: "PHP a Java", correct: true },
-            { id: "15", answer: "Javascript a C", correct: false },
+            { id: "15", answer: "JavaScript a C", correct: false },
           ],
         },
         {
@@ -67,7 +67,7 @@ if (rootElement) {
       id: "3",
       type: "class",
       path: "/vyt4",
-      title: "VYT4",
+      title: "VYT 4",
       image: `${vyt1}`,
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.",
@@ -91,7 +91,7 @@ if (rootElement) {
             { id: "24", answer: "Python + C#", correct: false },
             { id: "25", answer: "ASP a Java", correct: false },
             { id: "26", answer: "PHP a Java", correct: true },
-            { id: "27", answer: "Javascript a C", correct: false },
+            { id: "27", answer: "JavaScript a C", correct: false },
           ],
         },
         {

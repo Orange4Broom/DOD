@@ -34,12 +34,13 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
   padding: 20px;
+  min-height: calc(100vh - 280px);
+
 
   &__image__wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
     width: 100%;
   }
 
@@ -76,6 +77,18 @@ body {
   font-size: 10;
   border-radius: 2px;
   background-color: #FF7D00;
+}
+
+.correctanswerlike {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 40px 0;
+
+  img {
+    width: 300px;
+  }
 }
 
 .form {

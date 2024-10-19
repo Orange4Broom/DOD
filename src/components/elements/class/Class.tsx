@@ -2,18 +2,16 @@ import { useState } from "react";
 import { MockDataItem } from "../../../typings/Mockdata";
 import { DefaultLayout } from "../../layouts/defaultLayout/DefaultLayout";
 import { TextBlock } from "../textBlock/TextBlock";
+import likeImage from "../../../../public/assets/images/like.png";
 
 interface ClassProps {
   item: MockDataItem;
 }
 
 export const Class: React.FC<ClassProps> = ({ item }) => {
-  console.log(item);
-
   const [answers, setAnswers] = useState<string[]>([]);
   const [inputAnswer, setInputAnswer] = useState<string>("");
   const [isCorrect, setIsCorrect] = useState<boolean>(false);
-  console.log(answers);
 
   const handleRadioChange = (radioId: string) => {
     setAnswers((prevAnswers) => {
@@ -73,6 +71,7 @@ export const Class: React.FC<ClassProps> = ({ item }) => {
 
     if (correctAnswers && correctAnswers.length === item.questions?.length) {
       setIsCorrect(true);
+      scroll(0, 0);
       alert("Všechny odpovědi jsou správné!");
     } else {
       setIsCorrect(false);
@@ -129,10 +128,15 @@ export const Class: React.FC<ClassProps> = ({ item }) => {
             </form>
           </>
         ) : (
-          <TextBlock
-            showTitle={"correctanswers"}
-            description={item.instructions}
-          />
+          <>
+            <TextBlock
+              showTitle={"correctanswers"}
+              description={item.instructions}
+            />
+            <div className="correctanswerlike">
+              <img src={likeImage} alt="likeImage" />
+            </div>
+          </>
         )}
       </div>
     </DefaultLayout>

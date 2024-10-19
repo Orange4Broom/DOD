@@ -10,7 +10,6 @@ interface HomeProps {
 
 export const Home: React.FC<HomeProps> = ({ item }) => {
   const [choise, setChoise] = useState<number>(0);
-  console.log(item);
   return (
     <DefaultLayout title={item.title} image={item.image}>
       <div className="body">
