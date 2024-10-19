@@ -57,7 +57,7 @@ if (rootElement) {
           ],
         },
         {
-          question: "Kolik je na škole tříd?",
+          question: "Kolik je na škole tříd? (číslice)",
           type: "write",
           answers: [{ id: "90", answer: "12", correct: true }],
         },
