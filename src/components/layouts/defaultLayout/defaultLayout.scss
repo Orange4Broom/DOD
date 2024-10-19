@@ -1,6 +1,38 @@
-.layout {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+@media (min-width: 1000px) {
+  .layout {
+    display: none;
+  }
+
+  .pcoverlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 1000;
+
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+    }
+  } 
 }
+
+@media (max-width: 1000px) {
+  .layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .pcoverlay {
+    display: none;
+  }
+}
+

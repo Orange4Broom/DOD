@@ -63,6 +63,44 @@ if (rootElement) {
         },
       ],
     },
+    {
+      id: "3",
+      type: "class",
+      path: "/vyt4",
+      title: "VYT4",
+      image: `${vyt1}`,
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.",
+      instructions:
+        "Vyjděte z třídy a vydejte se do 2. patra a pak doleva na konec chodby kde se nachází učebna VYT4.",
+      questions: [
+        {
+          question: "V kolika učebnách IT se učí studenti?",
+          type: "click",
+          answers: [
+            { id: "20", answer: "4", correct: true },
+            { id: "21", answer: "3", correct: false },
+            { id: "22", answer: "1", correct: false },
+            { id: "23", answer: "5", correct: false },
+          ],
+        },
+        {
+          question: "Jaké hlavní programovací jazyky jsou vyučovány na G+SOŠ?",
+          type: "click",
+          answers: [
+            { id: "24", answer: "Python + C#", correct: false },
+            { id: "25", answer: "ASP a Java", correct: false },
+            { id: "26", answer: "PHP a Java", correct: true },
+            { id: "27", answer: "Javascript a C", correct: false },
+          ],
+        },
+        {
+          question: "Kolik je na škole tříd? (číslice)",
+          type: "write",
+          answers: [{ id: "99", answer: "12", correct: true }],
+        },
+      ],
+    },
   ];
   root.render(
     <React.StrictMode>
