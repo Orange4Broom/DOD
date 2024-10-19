@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MockDataItem, Question } from "../../../typings/Mockdata";
+import { MockDataItem } from "../../../typings/Mockdata";
 import { DefaultLayout } from "../../layouts/defaultLayout/DefaultLayout";
 import { TextBlock } from "../textBlock/TextBlock";
 
@@ -15,30 +15,29 @@ export const Class: React.FC<ClassProps> = ({ item }) => {
   const [isCorrect, setIsCorrect] = useState<boolean>(false);
   console.log(answers);
 
-  const handleRadioChange = (
-    e: React.ChangeEvent<HTMLInputElement>,
-    radioId: string,
-    questions: Question[]
-  ) => {
-    const question = questions.find((q) =>
-      q.answers.some((answer) => answer.id === radioId)
-    );
-
-    if (question) {
-      const existingAnswerIndex = answers.findIndex((id) =>
-        question.answers.some((answer) => answer.id === id)
+  const handleRadioChange = (radioId: string) => {
+    setAnswers((prevAnswers) => {
+      const question = item.questions?.find((q) =>
+        q.answers.some((answer) => answer.id === radioId)
       );
 
-      if (existingAnswerIndex !== -1) {
-        // Replace the existing answer
-        const newAnswers = [...answers];
-        newAnswers[existingAnswerIndex] = radioId;
-        setAnswers(newAnswers);
-      } else {
-        // Add the new answer
-        setAnswers([...answers, radioId]);
+      if (question) {
+        const existingAnswerIndex = prevAnswers.findIndex((id) =>
+          question.answers.some((answer) => answer.id === id)
+        );
+
+        if (existingAnswerIndex !== -1) {
+          // Replace the existing answer
+          const newAnswers = [...prevAnswers];
+          newAnswers[existingAnswerIndex] = radioId;
+          return newAnswers;
+        } else {
+          // Add the new answer
+          return [...prevAnswers, radioId];
+        }
       }
-    }
+      return prevAnswers;
+    });
   };
 
   const handleValidations = (e: React.FormEvent<HTMLFormElement>) => {
@@ -102,9 +101,7 @@ export const Class: React.FC<ClassProps> = ({ item }) => {
                             type="radio"
                             id={answer.id}
                             name={question.question}
-                            onChange={(e) =>
-                              handleRadioChange(e, answer.id, item.questions)
-                            }
+                            onChange={() => handleRadioChange(answer.id)}
                           />
                           <label htmlFor={answer.id}>{answer.answer}</label>
                         </div>
