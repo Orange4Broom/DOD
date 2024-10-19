@@ -5,6 +5,8 @@ import { MockDataTypes } from "./typings/Mockdata";
 import { Home } from "./components/blocks/home/Home";
 import "./index.scss";
 import { Class } from "./components/elements/class/Class";
+import vyt1 from "../public/assets/images/vyt1.png";
+import home from "../public/assets/images/home.png";
 
 const rootElement = document.getElementById("root");
 if (rootElement) {
@@ -15,7 +17,7 @@ if (rootElement) {
       type: "main",
       path: "/home",
       title: "Den otevřených dveří",
-      image: "../public/assets/images/home.png",
+      image: `${home}`,
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.",
       instructionsForIT:
@@ -28,7 +30,7 @@ if (rootElement) {
       type: "class",
       path: "/vyt1",
       title: "VYT1",
-      image: "../public/assets/images/vyt1.png",
+      image: `${vyt1}`,
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.",
       instructions:
