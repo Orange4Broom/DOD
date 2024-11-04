@@ -13,6 +13,8 @@ export const Class: React.FC<ClassProps> = ({ item }) => {
   const [inputAnswer, setInputAnswer] = useState<string>("");
   const [isCorrect, setIsCorrect] = useState<boolean>(false);
 
+  console.log(answers);
+
   const handleRadioChange = (radioId: string) => {
     setAnswers((prevAnswers) => {
       const question = item.questions?.find((q) =>
