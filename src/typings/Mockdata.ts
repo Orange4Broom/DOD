@@ -5,7 +5,7 @@ export interface Answer {
 }
 
 export interface Question {
-  question: string;
+  questionText: string;
   type: "click" | "write";
   answers: Answer[];
 }
