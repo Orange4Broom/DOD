@@ -2,7 +2,9 @@ import { useState } from "react";
 import { MockDataItem } from "../../../typings/Mockdata";
 import { DefaultLayout } from "../../layouts/defaultLayout/DefaultLayout";
 import { TextBlock } from "../textBlock/TextBlock";
-import likeImage from "../../../../public/assets/images/like.png";
+import likeImage from "../../../assets/images/like.png";
+import { QuestionRadio } from "../questionTypes/questionRadio/QuestionRadio";
+import { QuestionText } from "../questionTypes/questionText/QuestionText";
 
 interface ClassProps {
   item: MockDataItem;
@@ -12,6 +14,7 @@ export const Class: React.FC<ClassProps> = ({ item }) => {
   const [answers, setAnswers] = useState<string[]>([]);
   const [inputAnswer, setInputAnswer] = useState<string>("");
   const [isCorrect, setIsCorrect] = useState<boolean>(false);
+  console.log(answers);
 
   console.log(answers);
 
@@ -43,18 +46,10 @@ export const Class: React.FC<ClassProps> = ({ item }) => {
   const handleValidations = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const inputAnswers: { [key: string]: string } = {}; // Object to store input answers
-
-    // Collect input answers
-    const formData = new FormData(e.currentTarget);
-    formData.forEach((value, key) => {
-      inputAnswers[key] = value.toString();
-    });
-
     // Add matching input answers to the answers array
     item.questions?.forEach((question) => {
       question.answers?.forEach((answer) => {
-        if (inputAnswers[question.question] === answer.answer) {
+        if (inputAnswer === answer.answer) {
           setAnswers((prevAnswers) => [...prevAnswers, answer.id]);
         }
       });
@@ -66,8 +61,7 @@ export const Class: React.FC<ClassProps> = ({ item }) => {
         question.answers?.filter(
           (answer) =>
             answer.correct &&
-            (answers.includes(answer.id) ||
-              inputAnswers[question.question] === answer.answer)
+            (answers.includes(answer.id) || inputAnswer === answer.answer)
         ).length > 0
     );
 
@@ -93,35 +87,20 @@ export const Class: React.FC<ClassProps> = ({ item }) => {
             <form className="form" onSubmit={handleValidations}>
               {item.questions?.map((question, qIndex) =>
                 question.type === "click" ? (
-                  <div className="form__question" key={qIndex}>
-                    <h1 className="form__title">{question.question}</h1>
-                    <div className="form__radios__wrapper">
-                      {question.answers?.map((answer, aIndex) => (
-                        <div className="form__radio" key={aIndex}>
-                          <input
-                            type="radio"
-                            id={answer.id}
-                            name={question.question}
-                            onChange={() => handleRadioChange(answer.id)}
-                          />
-                          <label htmlFor={answer.id}>{answer.answer}</label>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+                  <QuestionRadio
+                    key={qIndex}
+                    question={question}
+                    qIndex={qIndex}
+                    handleRadioChange={handleRadioChange}
+                    answers={answers}
+                  />
                 ) : question.type === "write" ? (
-                  <div className="form__question" key={qIndex}>
-                    <h1 className="form__title">{question.question}</h1>
-                    <input
-                      className="form__input"
-                      placeholder="Napište odpověď"
-                      type="text"
-                      id={question.question}
-                      name={question.question}
-                      value={inputAnswer}
-                      onChange={(e) => setInputAnswer(e.target.value)}
-                    />
-                  </div>
+                  <QuestionText
+                    key={qIndex}
+                    questionText={question.questionText}
+                    inputAnswer={inputAnswer}
+                    setInputAnswer={setInputAnswer}
+                  />
                 ) : null
               )}
               <button className="choisebutton" type="submit">

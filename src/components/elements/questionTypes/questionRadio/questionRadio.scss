@@ -26,14 +26,15 @@
 }
 
 .form__option--selected {
-  background-color: #ff7f0f;
+  background-color: #FF7D00;
   color: #fff;
-  border-color: #ff7f0f;
+  border-color: #FF7D00;
+  font-weight: 600;
 
   &:hover {
-    background-color: #ff7f0f;
+    background-color: #FF7D00;
     color: #fff;
-    border-color: #ff7f0f;
+    border-color: #FF7D00;
   }
 }
 

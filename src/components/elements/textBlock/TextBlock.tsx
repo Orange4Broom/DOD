@@ -1,4 +1,4 @@
-import stairs from "../../../../public/assets/images/stairs.png";
+import stairs from "../../../assets/images/stairs.png";
 import "./textBlock.scss";
 
 interface TextBlockTypes {
@@ -23,42 +23,42 @@ export const TextBlock: React.FC<TextBlockTypes> = ({
       ) : null}
       <p className="textblock__description">{description}</p>
       {showTitle === "howitworks" && (
-        <>
+        <div>
           <p className="textblock__title">Rozmístění</p>
           <p className="textblock__description">
             Po škole jsou rozmístěny QR kódy v jednotlivých učebnách a
             stanovištích. Návštěvníci je mohou skenovat pomocí svého telefonu.
           </p>
-        </>
+        </div>
       )}
       {showTitle === "howitworks" && (
-        <>
+        <div>
           <p className="textblock__title">QR kódy</p>
           <p className="textblock__description">
             Každý QR kód odemkne úkol spojený s konkrétní učebnou nebo částí
             školy. Úkoly jsou zaměřeny na objevování školního prostředí,
             vybavení a informací o jednotlivých oborech.
           </p>
-        </>
+        </div>
       )}
       {showTitle === "howitworks" && (
-        <>
+        <div>
           <p className="textblock__title">Trasa</p>
           <p className="textblock__description">
             Aplikace vede návštěvníky postupně přes jednotlivé části školy, čímž
             je provádí interaktivní trasou.
           </p>
-        </>
+        </div>
       )}
       {showTitle === "howitworks" && (
-        <>
+        <div>
           <p className="textblock__title">Pomoc</p>
           <p className="textblock__description">
             Po načtení QR kódu v učebně se zobrazí kvíz a po správném
             zodpovězení vám řekne kam jít dál do dalších učeben a když se
             zaseknete neváhejte se obrátit na učitele.
           </p>
-        </>
+        </div>
       )}
 
       {showTitle === "goodchoise" && (

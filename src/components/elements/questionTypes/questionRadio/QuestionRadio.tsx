@@ -16,7 +16,7 @@ export const QuestionRadio: React.FC<QuestionRadioProps> = (props) => {
   const { question, qIndex, handleRadioChange, answers } = props;
 
   return (
-    <div className="form__question" key={qIndex}>
+    <div className="form__question">
       <h1 className="form__title">{question.questionText}</h1>
       <div className="form__options">
         {question.answers?.map((answer) => (

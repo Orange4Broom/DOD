@@ -2,13 +2,12 @@ interface QuestionTextProps {
   questionText: string;
   inputAnswer: string;
   setInputAnswer: (value: string) => void;
-  qIndex: number;
 }
 
 export const QuestionText: React.FC<QuestionTextProps> = (props) => {
-  const { questionText, inputAnswer, setInputAnswer, qIndex } = props;
+  const { questionText, inputAnswer, setInputAnswer } = props;
   return (
-    <div className="form__question" key={qIndex}>
+    <div className="form__question">
       <h1 className="form__title">{questionText}</h1>
       <input
         className="form__input"
