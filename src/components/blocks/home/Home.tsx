@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { DefaultLayout } from "../../layouts/defaultLayout/DefaultLayout";
 import { MockDataItem } from "../../../typings/Mockdata";
 import { TextBlock } from "../../elements/textBlock/TextBlock";
-import scanQR from "../../../../public/assets/images/scanqr.png";
+import scanQR from "../../../assets/images/scanqr.png";
 
 interface HomeProps {
   item: MockDataItem;
