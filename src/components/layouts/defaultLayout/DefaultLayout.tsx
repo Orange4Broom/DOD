@@ -4,6 +4,7 @@ import { Header } from "../../blocks/header/Header";
 import { Navigation } from "../../blocks/navigation/Navigation";
 
 import "./defaultLayout.scss";
+import { ToastContainer } from "react-toastify";
 
 interface DefaultLayoutProps {
   title: string;
@@ -18,6 +19,18 @@ export const DefaultLayout: React.FC<DefaultLayoutProps> = ({
 }) => {
   return (
     <>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
       <div className="pcoverlay">
         <h1>Aplikace je pouze přístupná pro mobilní zařízení 😎</h1>
       </div>

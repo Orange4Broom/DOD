@@ -5,6 +5,7 @@ import { TextBlock } from "../textBlock/TextBlock";
 import likeImage from "../../../assets/images/like.png";
 import { QuestionRadio } from "../questionTypes/questionRadio/QuestionRadio";
 import { QuestionText } from "../questionTypes/questionText/QuestionText";
+import { useToastify } from '../../../hooks/useToastify';
 
 interface ClassProps {
   item: MockDataItem;
@@ -14,6 +15,8 @@ export const Class: React.FC<ClassProps> = ({ item }) => {
   const [answers, setAnswers] = useState<string[]>([]);
   const [inputAnswer, setInputAnswer] = useState<string>("");
   const [isCorrect, setIsCorrect] = useState<boolean>(false);
+  const notify = useToastify().notify;
+
   console.log(answers);
 
   console.log(answers);
@@ -68,10 +71,10 @@ export const Class: React.FC<ClassProps> = ({ item }) => {
     if (correctAnswers && correctAnswers.length === item.questions?.length) {
       setIsCorrect(true);
       scroll(0, 0);
-      alert("Všechny odpovědi jsou správné!");
+      notify("success", "Všechny odpovědi jsou správné! 😎");
     } else {
       setIsCorrect(false);
-      alert("Některé odpovědi jsou špatně!");
+      notify("error", "Některé odpovědi jsou špatně! 😢");
     }
   };
 
