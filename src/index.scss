@@ -97,7 +97,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 48px;
+  gap: 80px;
   padding: 40px 0;
   width: 100%;
 
@@ -111,8 +111,9 @@ body {
   }
 
   &__title {
-  font-size: 18px;
+    font-size: 18px;
     font-weight: 700;
+    text-align: center;
 }
 
 &__radios__wrapper {

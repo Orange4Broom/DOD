@@ -1,13 +1,17 @@
 .form__title {
-  font-size: 1.5rem;
+  font-size: 20px;
   font-weight: bold;
   margin-bottom: 16px;
+  width: 100%;
 }
 
 .form__options {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .form__option {
