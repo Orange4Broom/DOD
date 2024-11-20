@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { DefaultLayout } from "../../layouts/defaultLayout/DefaultLayout";
+import scanQR from "../../../assets/images/scanqr.png";
 import { MockDataItem } from "../../../typings/Mockdata";
 import { TextBlock } from "../../elements/textBlock/TextBlock";
-import scanQR from "../../../assets/images/scanqr.png";
+import { DefaultLayout } from "../../layouts/defaultLayout/DefaultLayout";
 
 interface HomeProps {
   item: MockDataItem;

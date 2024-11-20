@@ -1,11 +1,11 @@
 import { useState } from "react";
+import likeImage from "../../../assets/images/like.png";
+import { useToastify } from '../../../hooks/useToastify';
 import { MockDataItem } from "../../../typings/Mockdata";
 import { DefaultLayout } from "../../layouts/defaultLayout/DefaultLayout";
-import { TextBlock } from "../textBlock/TextBlock";
-import likeImage from "../../../assets/images/like.png";
 import { QuestionRadio } from "../questionTypes/questionRadio/QuestionRadio";
 import { QuestionText } from "../questionTypes/questionText/QuestionText";
-import { useToastify } from '../../../hooks/useToastify';
+import { TextBlock } from "../textBlock/TextBlock";
 
 interface ClassProps {
   item: MockDataItem;

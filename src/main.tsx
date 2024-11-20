@@ -1,11 +1,11 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import "react-toastify/dist/ReactToastify.css";
 import { Home } from "./components/blocks/home/Home";
-import "./index.scss";
 import { Class } from "./components/elements/class/Class";
 import { MockUpData } from "./data/TestData";
-import "react-toastify/dist/ReactToastify.css";
+import "./index.scss";
 
 const rootElement = document.getElementById("root");
 if (rootElement) {
