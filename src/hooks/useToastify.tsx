@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 //const notify = useToastify().notify;
 
 export const useToastify = () => {
-  const notify = (type: string, message: string) => {
+  const notify = (type: "success" | "error" | "info" | "warning", message: string) => {
     switch (type) {
       case "success":
         toast.success(message);
