@@ -4,7 +4,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import { Home } from "./components/blocks/home/Home";
 import { Class } from "./components/elements/class/Class";
-import { MockUpData } from "./data/Data";
+import { MockUpData } from "./data/ProdData";
 import "./index.scss";
 
 const rootElement = document.getElementById("root");
